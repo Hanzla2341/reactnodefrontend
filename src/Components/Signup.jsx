@@ -12,7 +12,7 @@ const Signup = () => {
   const handleGetCode = async (email) => {
     if (!email) return alert("Enter email first");
     try {
-      await fetch("http://localhost:5000/api/send-code", {
+      await fetch("https://reactnodebackend-tsrl.vercel.app/api/send-code", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -36,7 +36,7 @@ const Signup = () => {
   // Updated handleSignup: POST to backend
   const handleSignup = async (values, { setSubmitting, setErrors }) => {
     try {
-      const response = await fetch("http://localhost:5000/api/signup", {
+      const response = await fetch("https://reactnodebackend-tsrl.vercel.app/api/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),

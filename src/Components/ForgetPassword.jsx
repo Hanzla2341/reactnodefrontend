@@ -12,7 +12,7 @@ const Forget = () => {
     const handleGetCode = async (email) => {
       if (!email) return alert("Enter email first");
       try {
-        await fetch("http://localhost:5000/api/send-code", {
+        await fetch("https://reactnodebackend-tsrl.vercel.app/api/send-code", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email }),
@@ -35,7 +35,7 @@ const Forget = () => {
 
   const handleUpdatePassword = async (values, { setSubmitting, setErrors }) => {
   try {
-    const response = await fetch("http://localhost:5000/api/update-password", {
+    const response = await fetch("https://reactnodebackend-tsrl.vercel.app/api/update-password", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
